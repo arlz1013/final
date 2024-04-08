@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Registro de Estudiantes</title>
+  <!-- Agregar el enlace al CSS de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body{
+        background-color: rgb(255, 228, 196);
+    }
+    .navbar .nav-link.active {
+      font-weight: bold;
+    }
+    label{
+        color: rgb(236, 235, 234);
+    }
+    .popover {
+      max-width: 50%;
+      max-height: 50%;
+      font-size: xx-large;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container" >
+          <a class="navbar-brand" href="index.html">Log-in</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="formularioEstudiantes.html">Registro Estudiante</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="formularioPerfil.html">Perfil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="formularioProfe.html">Registro Profesor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="formularioInscripcionCurso.html">Inscribir Curso</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="formularioEvaluacionCurso.html">Evaluar Curso</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="formularioContenidoEducativo.html">Agregar Contenido</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="formularioSoporte.html">Soporte</a>
+              </li>
+            </ul>
+            <div class="d-flex">
+              <img src="user.jpg" alt="Imagen de Usuario" class="rounded-circle" width="40" height="40" style="margin-right: 10px; background-color: white;">
+              <a href="index.html"><button class="btn btn-outline-light" type="button">Cerrar Sesión</button></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container" style="margin-top: 50px;border-radius: 20px;background-color: #212529 ;">
+        <h1 class="text-center" style="color: antiquewhite;padding-top: 1%;padding-bottom: 1%;">Actualización de Perfil</h1>
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+          </div>
+          <div class="mb-3">
+            <label for="apellido" class="form-label">Apellido:</label>
+            <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido">
+          </div>
+          <div class="mb-3">
+            <label for="foto_perfil" class="form-label">Foto de Perfil:</label>
+            <input type="file" class="form-control" id="foto_perfil">
+          </div>
+          <div class="mb-3">
+            <label for="info_contacto" class="form-label">Información de Contacto:</label>
+            <textarea class="form-control" id="info_contacto" rows="3" placeholder="Ingrese su información de contacto"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="historial_educativo" class="form-label">Historial Educativo (para estudiantes):</label>
+            <textarea class="form-control" id="historial_educativo" rows="3" placeholder="Ingrese su historial educativo"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="experiencia_profesional" class="form-label">Experiencia Profesional (para profesores):</label>
+            <textarea class="form-control" id="experiencia_profesional" rows="3" placeholder="Ingrese su experiencia profesional"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="otra_informacion" class="form-label">Otra Información:</label>
+            <textarea class="form-control" id="otra_informacion" rows="3" placeholder="Ingrese cualquier otra información relevante"></textarea>
+          </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Actualizando Perfil!" data-bs-content="Se esta actualizando el Perfil, Porfavor espere" id="btnEnviarFormPerfil" style="background-color: green;">Actualizar!</button>
+          </div>
+        </form>
+      </div>
+          
+  <!-- Agregar el enlace al JavaScript de Bootstrap y al JavaScript de Popper (si es necesario) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+  </script>
+</body>
+</html>
